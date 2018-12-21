@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { markTopic } from '../actions'
+import { seeTopicDetail, backToTopicList, markTopic } from '../actions'
 import TopicList from '../components/TopicList'
 
 
@@ -9,6 +9,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
+  seeTopicDetail: name => dispatch(seeTopicDetail(name)),
+  backToTopicList: dispatch(backToTopicList),
   markTopic: name => dispatch(markTopic(name))
 })
 

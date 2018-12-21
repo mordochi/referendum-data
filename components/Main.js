@@ -1,11 +1,16 @@
 import React from 'react'
-import { View } from 'react-native';
+import PropTypes from 'prop-types'
+import ShowTopicDetail from '../containers/ShowTopicDetail'
 import ShowTopicList from '../containers/ShowTopicList'
 
-const Main = () => (
-  <View>
+const Main = ({ topicDetail }) => (
+  topicDetail !== '' ?
+    <ShowTopicDetail /> :
     <ShowTopicList />
-  </View>
 )
+
+Main.propTypes = {
+  topicDetail: PropTypes.string.isRequired,
+}
 
 export default Main

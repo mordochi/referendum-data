@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { View, SectionList, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-const TopicList = ({ topics, markTopics, markTopic }) => (
+const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
   <SectionList
     contentContainerStyle={styles.list}
     sections={topics}
     keyExtractor={(item) => item}
-    renderItem={({item}) => <TouchableOpacity onPress={() => markTopic(item)}>
+    renderItem={({item}) => <TouchableOpacity onPress={() => {markTopic(item);seeTopicDetail(item);}}>
       <View style={styles.itemBox}>
         <Text style={[markTopics.includes(item) ? [styles.item,styles.a] : styles.item]}>{item}</Text>
       </View>
@@ -54,6 +54,7 @@ TopicList.propTypes = {
   markTopics: PropTypes.arrayOf(
     PropTypes.string.isRequired
   ).isRequired,
+  seeTopicDetail: PropTypes.func.isRequired,
   markTopic: PropTypes.func.isRequired
 }
 

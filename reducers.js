@@ -39,6 +39,17 @@ function topics(state = topicsInitialState, action) {
   }
 }
 
+function topicDetail(state = '', action) {
+  switch (action.type) {
+    case 'SEE_TOPIC_DETAIL':
+      return action.name
+    case 'BACK_TO_TOPIC_LIST':
+      return ''
+    default:
+      return state
+  }
+}
+
 function markTopics(state = [], action) {
   switch (action.type) {
     case 'MARK_TOPIC':
@@ -54,6 +65,7 @@ function markTopics(state = [], action) {
 export default function referendumApp(state = {}, action) {
   return {
     topics: topics(state.topics, action),
+    topicDetail: topicDetail(state.topicDetail, action),
     markTopics: markTopics(state.markTopics, action)
   }
 }
