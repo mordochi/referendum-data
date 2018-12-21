@@ -24,7 +24,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.dmmt-design.referendum-data",
+      "bundleIdentifier": "Referendum",
       "publishBundlePath": "ios/referendum-data/Supporting/shell-app.bundle",
       "publishManifestPath": "ios/referendum-data/Supporting/shell-app-manifest.json"
     },
