@@ -3,9 +3,9 @@ export const seeTopicDetail = name => ({
   name
 })
 
-export const backToTopicList = {
+export const backToTopicList = () => ({
   type: 'BACK_TO_TOPIC_LIST'
-}
+})
 
 export const markTopic = name => ({
   type: 'MARK_TOPIC',
