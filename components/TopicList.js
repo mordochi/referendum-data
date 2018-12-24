@@ -1,24 +1,27 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { View, SectionList, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { View, SectionList, Text, StyleSheet, TouchableOpacity } from 'react-native';
+
 
 const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
-  <SectionList
-    contentContainerStyle={styles.list}
-    sections={topics}
-    keyExtractor={(item) => item}
-    renderItem={({item}) => <TouchableOpacity onPress={() => {markTopic(item);seeTopicDetail(item);}}>
-      <View style={styles.itemBox}>
-        <Text style={[markTopics.includes(item) ? [styles.item,styles.a] : styles.item]}>{item}</Text>
-      </View>
-    </TouchableOpacity>}
-    renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
-  />
+  <View>
+    <SectionList
+      contentContainerStyle={styles.list}
+      sections={topics}
+      keyExtractor={(item) => item}
+      renderItem={({item}) => <TouchableOpacity onPress={() => {markTopic(item);seeTopicDetail(item);}}>
+        <View style={styles.itemBox}>
+          <Text style={[markTopics.includes(item) ? [styles.item,styles.a] : styles.item]}>{item}</Text>
+        </View>
+      </TouchableOpacity>}
+      renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+    />
+  </View>
 )
 
 const styles = StyleSheet.create({
   list: {
-    backgroundColor: '#033e6b',
+    backgroundColor: 'transparent',
   },
   sectionHeader: {
     fontSize: 20,

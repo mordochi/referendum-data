@@ -1,14 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { AntDesign } from '@expo/vector-icons';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { TOPIC_DATA } from '../topicData';
+
 
 const TopicDetail = ({ topicDetail, backToTopicList }) => (
   <View style={styles.outerBox}>
     <TouchableOpacity onPress={() => backToTopicList()}>
       <AntDesign name="arrowleft" size={22} color="#6c8da7" />
     </TouchableOpacity>
+
     <View style={styles.detailBox}>
       <Text style={styles.title}>{ topicDetail.split(' ')[0] }</Text>
       <Text style={[styles.title, styles.titleGap]}>{ topicDetail.split(' ')[1] }</Text>
