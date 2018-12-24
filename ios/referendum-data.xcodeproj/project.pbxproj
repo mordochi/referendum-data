@@ -18,6 +18,7 @@
 		B5CFBF4F1EDE419400B4BE24 /* EXBuildConstants.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5CFBF4E1EDE419400B4BE24 /* EXBuildConstants.plist */; };
 		B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047E1F3A684600E91581 /* shell-app-manifest.json */; };
 		B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5DB047F1F3A684600E91581 /* shell-app.bundle */; };
+		E5AC767821D0CB1400D70675 /* for generator(portrait).png in Resources */ = {isa = PBXBuildFile; fileRef = E5AC767721D0CB1400D70675 /* for generator(portrait).png */; };
 		EBB8117C1BFA0514F79CAF74 /* libPods-referendum-data.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A88D15726AD99E8A257BC7 /* libPods-referendum-data.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		B5DB047E1F3A684600E91581 /* shell-app-manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "shell-app-manifest.json"; sourceTree = "<group>"; };
 		B5DB047F1F3A684600E91581 /* shell-app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "shell-app.bundle"; sourceTree = "<group>"; };
 		C4A88D15726AD99E8A257BC7 /* libPods-referendum-data.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-referendum-data.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5AC767721D0CB1400D70675 /* for generator(portrait).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "for generator(portrait).png"; path = "../../../../Desktop/for generator(portrait).png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				B56386471DB9693800A0598C /* AppDelegate.h */,
 				B56386481DB9693800A0598C /* AppDelegate.m */,
 				B56386501DB9693800A0598C /* Assets.xcassets */,
+				E5AC767721D0CB1400D70675 /* for generator(portrait).png */,
 				B563865B1DB96A5E00A0598C /* Supporting */,
 			);
 			path = "referendum-data";
@@ -151,7 +154,7 @@
 				TargetAttributes = {
 					B56386401DB9693800A0598C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 45LHZDJ283;
+						DevelopmentTeam = GEXKH4HCBL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -184,6 +187,7 @@
 				B5CFBF4F1EDE419400B4BE24 /* EXBuildConstants.plist in Resources */,
 				B56386671DB9994300A0598C /* EXSDKVersions.plist in Resources */,
 				B5693E921FABD46800307FA4 /* launch_icon.png in Resources */,
+				E5AC767821D0CB1400D70675 /* for generator(portrait).png in Resources */,
 				B5693E8E1FABD16A00307FA4 /* LaunchScreen.xib in Resources */,
 				B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */,
 				B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */,
@@ -396,7 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 45LHZDJ283;
+				DEVELOPMENT_TEAM = GEXKH4HCBL;
 				INFOPLIST_FILE = "$(SRCROOT)/referendum-data/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dmmt-design.referendum-data";
@@ -413,7 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 45LHZDJ283;
+				DEVELOPMENT_TEAM = GEXKH4HCBL;
 				INFOPLIST_FILE = "$(SRCROOT)/referendum-data/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dmmt-design.referendum-data";
