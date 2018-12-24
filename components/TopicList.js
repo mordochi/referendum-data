@@ -1,30 +1,36 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { View, SectionList, Text, StyleSheet } from 'react-native'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { View, SectionList, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const width = '80%';
 
-const TopicList = ({ topics, markTopic }) => (
-
+const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
+  <View>
     <SectionList
       contentContainerStyle={styles.list}
+      stickySectionHeadersEnabled={false}
       sections={topics}
       keyExtractor={(item) => item}
-      renderItem={({item}) => <View style={styles.itemBox}><Text style={styles.item} onClick={() => markTopic(item)}>{item}</Text></View>}
+      renderItem={({item}) => <TouchableOpacity onPress={() => {markTopic(item);seeTopicDetail(item);}}>
+        <View style={[markTopics.includes(item) ? [styles.itemBox, styles.seenBox] : styles.itemBox]}>
+          <Text style={[markTopics.includes(item) ? [styles.item, styles.seen] : styles.item]}>{item}</Text>
+        </View>
+      </TouchableOpacity>}
       renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
     />
-
+  </View>
 )
 
 const styles = StyleSheet.create({
-  outer: {
-
-  },
   list: {
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
   },
   sectionHeader: {
-
+    fontSize: 20,
+    marginTop: 70,
+    marginLeft: 35,
+    marginBottom: 30,
+    letterSpacing: 3,
+    color: '#5f839f'
   },
   itemBox: {
     marginVertical: 3,
@@ -32,10 +38,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 35,
     backgroundColor: 'rgba(15, 70, 112, .6)',
   },
+  seenBox: {
+    backgroundColor: 'rgba(62, 106, 140, .6)'
+  },
   item: {
     fontSize: 16,
     letterSpacing: 3,
+    color: '#f7f9fa',
   },
+  seen: {
+    color: '#c5c7c8',
+  }
 })
 
 TopicList.propTypes = {
@@ -45,6 +58,10 @@ TopicList.propTypes = {
       PropTypes.string.isRequired
     ).isRequired
   }).isRequired).isRequired,
+  markTopics: PropTypes.arrayOf(
+    PropTypes.string.isRequired
+  ).isRequired,
+  seeTopicDetail: PropTypes.func.isRequired,
   markTopic: PropTypes.func.isRequired
 }
 

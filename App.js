@@ -4,7 +4,7 @@ import { AppLoading, Asset, Font, Icon } from 'expo';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducers'
-import Main from './components/Main';
+import ShowMain from './containers/ShowMain'
 
 const store = createStore(rootReducer);
 
@@ -27,7 +27,7 @@ export default class App extends React.Component {
         <Provider store={store}>
           <View style={styles.container}>
             {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-            <Main />
+            <ShowMain />
           </View>
         </Provider>
       );
