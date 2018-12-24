@@ -10,8 +10,8 @@ const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
       sections={topics}
       keyExtractor={(item) => item}
       renderItem={({item}) => <TouchableOpacity onPress={() => {markTopic(item);seeTopicDetail(item);}}>
-        <View style={styles.itemBox}>
-          <Text style={[markTopics.includes(item) ? [styles.item,styles.a] : styles.item]}>{item}</Text>
+        <View style={[markTopics.includes(item) ? [styles.itemBox, styles.seenBox] : styles.itemBox]}>
+          <Text style={[markTopics.includes(item) ? [styles.item, styles.seen] : styles.item]}>{item}</Text>
         </View>
       </TouchableOpacity>}
       renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
@@ -37,13 +37,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 35,
     backgroundColor: 'rgba(15, 70, 112, .6)',
   },
+  seenBox: {
+    backgroundColor: 'rgba(62, 106, 140, .6)'
+  },
   item: {
     fontSize: 16,
     letterSpacing: 3,
     color: '#f7f9fa',
   },
-  a: {
-    textDecorationLine: 'line-through'
+  seen: {
+    color: '#c5c7c8',
   }
 })
 
