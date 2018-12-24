@@ -7,6 +7,7 @@ const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
   <View>
     <SectionList
       contentContainerStyle={styles.list}
+      stickySectionHeadersEnabled={false}
       sections={topics}
       keyExtractor={(item) => item}
       renderItem={({item}) => <TouchableOpacity onPress={() => {markTopic(item);seeTopicDetail(item);}}>
