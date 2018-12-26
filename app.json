@@ -36,6 +36,7 @@
       "package": "com.referendumdata.android",
       "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
       "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
-    }
+    },
+    "description": ""
   }
 }

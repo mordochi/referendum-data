@@ -25,10 +25,12 @@ public class AppConstants {
     List<Constants.EmbeddedResponse> embeddedResponses = new ArrayList<>();
 
     
+        
+        
         // ADD EMBEDDED RESPONSES HERE
         // START EMBEDDED RESPONSES
         embeddedResponses.add(new Constants.EmbeddedResponse("https://exp.host/@mordochi/referendum-data", "assets://shell-app-manifest.json", "application/json"));
-        embeddedResponses.add(new Constants.EmbeddedResponse("https://d1wp6m56sqw74a.cloudfront.net/%40mordochi%2Freferendum-data%2F1.0.0%2F0d657a1664947408b4684d6b4117a81d-31.0.0-android.js", "assets://shell-app.bundle", "application/javascript"));
+        embeddedResponses.add(new Constants.EmbeddedResponse("https://d1wp6m56sqw74a.cloudfront.net/%40mordochi%2Freferendum-data%2F1.0.0%2Fdfa52795fba66eeeffc9b7e41432bb4b-31.0.0-android.js", "assets://shell-app.bundle", "application/javascript"));
         // END EMBEDDED RESPONSES
     EMBEDDED_RESPONSES = embeddedResponses;
   }
