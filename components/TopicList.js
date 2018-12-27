@@ -1,22 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, SectionList, Text, StyleSheet, TouchableOpacity } from 'react-native';
-
+import { ScaleAndOpacity } from 'react-native-motion';
 
 const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
   <View>
-    <SectionList
-      contentContainerStyle={styles.list}
-      stickySectionHeadersEnabled={false}
-      sections={topics}
-      keyExtractor={(item) => item}
-      renderItem={({item}) => <TouchableOpacity onPress={() => {markTopic(item);seeTopicDetail(item);}}>
-        <View style={[markTopics.includes(item) ? [styles.itemBox, styles.seenBox] : styles.itemBox]}>
-          <Text style={[markTopics.includes(item) ? [styles.item, styles.seen] : styles.item]}>{item}</Text>
-        </View>
-      </TouchableOpacity>}
-      renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
-    />
+    <ScaleAndOpacity scaleMin={0.97}>
+      <SectionList
+        contentContainerStyle={styles.list}
+        stickySectionHeadersEnabled={false}
+        sections={topics}
+        keyExtractor={(item) => item}
+        renderItem={({item}) => <TouchableOpacity onPress={() => {markTopic(item);seeTopicDetail(item);}}>
+          <View style={[markTopics.includes(item) ? [styles.itemBox, styles.seenBox] : styles.itemBox]}>
+            <Text style={[markTopics.includes(item) ? [styles.item, styles.seen] : styles.item]}>{item}</Text>
+          </View>
+        </TouchableOpacity>}
+        renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+      />
+    </ScaleAndOpacity>
   </View>
 )
 
