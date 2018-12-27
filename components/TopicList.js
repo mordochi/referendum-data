@@ -6,6 +6,9 @@ import { ScaleAndOpacity } from 'react-native-motion';
 const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
   <View>
     <ScaleAndOpacity scaleMin={0.97}>
+      <Text style={styles.sectionTitle}>
+        歷屆台灣公民投票結果
+      </Text>
       <SectionList
         contentContainerStyle={styles.list}
         stickySectionHeadersEnabled={false}
@@ -25,6 +28,13 @@ const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
 const styles = StyleSheet.create({
   list: {
     backgroundColor: 'transparent',
+  },
+  sectionTitle: {
+    fontSize: 24,
+    marginTop: 100,
+    marginLeft: 35,
+    letterSpacing: 5,
+    color: '#e3e5e6'
   },
   sectionHeader: {
     fontSize: 20,
