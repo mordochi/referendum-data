@@ -1,0 +1,4 @@
+#Fri Dec 28 22:37:43 CST 2018
+base.0=/Users/lynnchi/Desktop/referendum-data/android/app/build/intermediates/transforms/dexMerger/devMinSdkDevKernel/debug/8
+path.0=classes.dex
+renamed.0=classes.dex
