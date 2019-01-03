@@ -11,3 +11,7 @@ export const markTopic = name => ({
   type: 'MARK_TOPIC',
   name
 })
+
+export const switchNotification = () => ({
+  type: 'SWITCH_NOTIFICATION'
+})

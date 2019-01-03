@@ -1,10 +1,11 @@
 import React from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { Platform, StatusBar, StyleSheet, View, AppState } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducers'
 import ShowMain from './containers/ShowMain'
+//import PushController from './PushController'
 
 const store = createStore(rootReducer);
 
@@ -12,6 +13,29 @@ export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+    };
+
+    this.handleAppStateChange = this.handleAppStateChange.bind(this);
+  }
+
+  componentDidMount() {
+    AppState.addEventListener('change', this.handleAppStateChange);
+  }
+
+  componentWillUnmount() {
+    AppState.removeEventListener('change', this.handleAppStateChange);
+  }
+
+  handleAppStateChange(appState) {
+    if(appState === 'background') {
+
+    }
+  }
 
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {

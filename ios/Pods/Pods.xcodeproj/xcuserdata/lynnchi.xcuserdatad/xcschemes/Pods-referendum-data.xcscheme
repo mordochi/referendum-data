@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "907E549C54B05C01C655F9A9DEED7D88"
+               BlueprintIdentifier = "D78062655BFE752CBF9DA1E0583F5778"
                BlueprintName = "Pods-referendum-data"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-referendum-data.a">

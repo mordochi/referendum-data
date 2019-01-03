@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, SectionList, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, SectionList, Text, Switch, StyleSheet, TouchableOpacity } from 'react-native';
 import { ScaleAndOpacity } from 'react-native-motion';
 
-const TopicList = ({ topics, markTopics, seeTopicDetail, markTopic }) => (
+const TopicList = ({ topics, markTopics, notification, seeTopicDetail, markTopic, switchNotification }) => (
   <View>
     <ScaleAndOpacity scaleMin={0.97}>
       <Text style={styles.sectionTitle}>
         歷屆台灣公民投票結果
       </Text>
+      <Switch value={notification} onValueChange={() => switchNotification()} />
       <SectionList
         contentContainerStyle={styles.list}
         stickySectionHeadersEnabled={false}

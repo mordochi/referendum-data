@@ -62,10 +62,20 @@ function markTopics(state = [], action) {
   }
 }
 
+function notification(state = true, action) {
+  switch (action.type) {
+    case 'SWITCH_NOTIFICATION':
+      return !state
+    default:
+      return state
+  }
+}
+
 export default function referendumApp(state = {}, action) {
   return {
     topics: topics(state.topics, action),
     topicDetail: topicDetail(state.topicDetail, action),
-    markTopics: markTopics(state.markTopics, action)
+    markTopics: markTopics(state.markTopics, action),
+    notification: notification(state.notification, action)
   }
 }
